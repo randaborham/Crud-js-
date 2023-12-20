@@ -1,0 +1,14 @@
+.btn-sm1 {
+  background-color: #ffc107;
+  color: black;
+}
+.btn-sm1:hover {
+  background-color: #f0b913;
+}
+.btn-sm2 {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-sm2:hover {
+  background-color: #dc4b59;
+}

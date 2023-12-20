@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud</title>
+    <!--bootstarp link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--fontwesome link-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!--style link-->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="w-75 mx-auto bg-info rounded p-3 small shadow">
+      <h1 class="text-center">Crud System</h1>
+      <div>
+        <label for="productNameInput">product Name:</label>
+        <input
+          oninput="validitioname();"
+          id="productNameInput"
+          type="text"
+          class="form-control"
+        />
+        <div id="namemassge" class="alert alert-danger d-none">
+          must be at least 4 characters long and begin with a capital letter
+        </div>
+      </div>
+      <div>
+        <label for="productPriceInput">product Price:</label>
+        <input
+          oninput="validitionprice();"
+          id="productPriceInput"
+          type="number"
+          class="form-control"
+        />
+        <div id="pricemassge" class="alert alert-danger d-none">
+          must be at least 3 number
+        </div>
+      </div>
+      <div>
+        <label for="productCategoryInput">product Category:</label>
+        <input
+          oninput="validitioncategory();"
+          id="productCategoryInput"
+          type="text"
+          class="form-control"
+        />
+        <div id="categorymassge" class="alert alert-danger d-none">
+          must be at least 4 characters long and begin with a capital letter
+        </div>
+      </div>
+      <div>
+        <label for="productDescriptionInput">product Description:</label>
+        <textarea
+          oninput="validitiondiscription();"
+          id="productDescriptionInput"
+          class="form-control"
+        >
+        </textarea>
+        <div id="descmassge" class="alert alert-danger d-none">
+          must be characters
+        </div>
+      </div>
+      <button
+        id="addbtn"
+        onclick="AddProduct();"
+        class="btn btn-primary mt-3 w-100 small shadow fw-bold"
+      >
+        Add Product
+      </button>
+      <button
+        onclick="updateproduct();"
+        id="updatabtn"
+        class="btn btn-primary mt-3 w-100 small shadow fw-bold d-none"
+      >
+        Update Product
+      </button>
+
+      <input
+        id="searchInput"
+        type="search"
+        oninput="searchproduct();"
+        class="form-control w-75 my-3 mx-auto"
+        placeholder="Search..."
+      />
+
+      <table class="table my-3 text-center small shadow">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody"></tbody>
+      </table>
+    </div>
+    <!--javasript link-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
